@@ -1,5 +1,5 @@
 from NeuralNetwork import *
-from nn-settings import *
+from NN_Settings import *
 import time
 import copy
 
