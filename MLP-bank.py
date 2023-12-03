@@ -15,7 +15,6 @@ file_path = 'input/A2-bank/bank-additional-processed.csv'
 df_dataset = pd.read_csv(file_path, delimiter='\t', header=1)
 
 # Display the first few rows of each dataset
-#print("Separable Dataset:")
 print(df_dataset.head())
 
 # Convert the last column to integers

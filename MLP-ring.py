@@ -19,7 +19,6 @@ df_separable = pd.read_csv(file_path_separable, delimiter='\t', header=None)
 df_test = pd.read_csv(file_path_test, delimiter='\t', header=None)
 
 # Display the first few rows of each dataset
-#print("Separable Dataset:")
 #print(df_separable.head())
 
 #print("\nTest Dataset:")

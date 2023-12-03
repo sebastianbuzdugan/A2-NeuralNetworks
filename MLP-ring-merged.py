@@ -19,7 +19,6 @@ df_merged = pd.read_csv(file_path_merged, delimiter='\t', header=None)
 df_test = pd.read_csv(file_path_test, delimiter='\t', header=None)
 
 # Display the first few rows of each dataset
-#print("Dataset:")
 #print(df_merged.head())
 
 #print("\nTest Dataset:")

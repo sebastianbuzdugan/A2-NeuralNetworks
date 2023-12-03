@@ -15,7 +15,6 @@ file_path = 'input/A2-personalized/data_banknote_authentication-processed.txt'
 df_dataset = pd.read_csv(file_path, delimiter='\t', header=1)
 
 # Display the first few rows of each dataset
-#print("Separable Dataset:")
 print(df_dataset.head())
 
 # Convert the last column to integers
@@ -31,7 +30,6 @@ X_train, X_test, y_train, y_test  = train_test_split(
 
 # Create and train an MLPRegressor
 model = MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=1000, random_state=42)
-
 
 # Perform cross-validation
 cross_val_scores = cross_val_score(model, X_train, y_train, cv=5)
@@ -69,7 +67,6 @@ print(conf_matrix)
 #Print classification report for both datasets
 print(f"\nClassification Report for Dataset:")
 print(classification_report(y_test, y_pred_class))
-
 
  # Compute ROC curve and AUC
 fpr, tpr, thresholds = roc_curve(y_test, y_pred)
