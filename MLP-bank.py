@@ -29,7 +29,7 @@ X_train, X_test, y_train, y_test  = train_test_split(
 )
 
 # Create and train an MLPRegressor
-model = MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=1000, random_state=42)
+model = MLPRegressor(hidden_layer_sizes=(100,50), max_iter=1000, random_state=42)
 
 
 # Perform cross-validation
@@ -47,7 +47,7 @@ model.fit(X_train, y_train.ravel())
 # Make predictions on the test set
 y_pred = model.predict(X_test)
 
-print(y_pred)
+#print(y_pred)
 
 threshold = 0.5  # Adjust the threshold as needed
 y_pred_class = (y_pred > threshold).astype(int)
@@ -59,6 +59,7 @@ print(f'Mean Squared Error: {mse}')
 # Evaluate the models
 accuracy = accuracy_score(y_test, y_pred_class)
 print(f"Accuracy on the test set for dataset: {accuracy:.2f}")
+print(f"Classification error on the test set for dataset: {1-accuracy:.2%}")
 
 # Compute confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred_class)
